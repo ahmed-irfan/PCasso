@@ -90,6 +90,10 @@ LookaheadSplitting::LookaheadSplitting(CoreConfig& config):
 
 LookaheadSplitting::~LookaheadSplitting()
 {
+  if (splitting)
+    delete splitting;
+  if (validAtLevel)
+    delete validAtLevel;
 }
 
 void LookaheadSplitting::setTimeOut(double to)
